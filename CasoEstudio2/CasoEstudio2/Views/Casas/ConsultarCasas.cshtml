@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CasoEstudio2.Entities.CasasEnt>
+@{
+}
+
+<div class="text-center my-5">
+    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Tabla De Casas</span></h2>
+</div>
+
+<div class="row">
+
+    @if (Model.Count() > 0)
+    {
+        <div class="col-1"></div>
+        <div class="col-10">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Usuario</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Descripcion</td>
+                            <td>@item.Precio</td>
+                            <td>@item.Usuario</td>
+                            <td>@item.Estado</td>
+                            @if (item.Fecha != DateTime.MinValue)
+                            {
+                                <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+                            }
+                            else
+                            {
+                                <td>Fecha no disponible </td>
+                            }   
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center">No hay casas en este momento</h5>
+                </div>
+
+            </div>
+            <br /><br />
+        </div>
+    }
+
+</div>

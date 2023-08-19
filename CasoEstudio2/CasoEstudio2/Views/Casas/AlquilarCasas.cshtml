@@ -1,0 +1,48 @@
+﻿@model CasoEstudio2.Entities.CasasEntRespuesta
+@{
+    
+}
+
+<div class="text-center my-5">
+    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Alquilar Casas</span></h2>
+</div>
+
+@using (Html.BeginForm("RegistrarAlquiler", "Casas", FormMethod.Post, new { @class = "text-start" }))
+{
+    @Html.TextBoxFor(x => x.IdCasa, new { @class="form-control",  @type="hidden", @id="casaIdHidden", @name="casaIdHidden", @value="", @required = "required"})
+
+    <div class="form-group">
+        <label for="IdCasa">Seleccionar Casa:</label>
+        <select class="form-control" id="IdCasa" name="IdCasa">
+            <option value="">Seleccione una casa...</option>
+            @foreach (var item in Model.Objetos)
+            {
+                <option value="@item.IdCasa">@item.IdCasa - @item.Descripcion</option>
+            }
+
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="PrecioCasa">Precio Mensual:</label>
+        <input type="text" class="form-control" id="PrecioCasa" name="PrecioCasa" readonly>
+    </div>
+    <div class="form-group">
+        <label for="UsuarioAlquiler">Usuario de Alquiler:</label>
+        <div class="input-group input-group-outline mb-3">
+            @Html.TextBoxFor(x => x.Usuario, new { @class="form-control", @placeholder="Nombre del usuario", @required = "required"})
+        </div>
+        
+    </div>
+    
+    <button type="submit" class="btn btn-outline-success">Alquilar</button>
+}
+
+<script>
+    $(document).ready(function () {
+        $("#IdCasa").change(function () {
+            var selectedId = $(this).val();
+
+            $("#casaIdHidden").val(selectedId);
+        });
+    });
+</script>

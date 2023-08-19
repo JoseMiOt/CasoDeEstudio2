@@ -54,6 +54,42 @@ namespace CasoEstudio2_API.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("ConsultarCasasDisponibles")]
+        public IActionResult ConsultarCasasDisponibles()
+        {
+            var resultado = new List<CasasEnt>();
+            var respuesta = new CasasEntRespuesta();
+            try
+            {
+                using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+                {
+                    resultado = connection.Query<CasasEnt>("ConsultaCasasDisponibles",
+                        new { },
+                        commandType: System.Data.CommandType.StoredProcedure).ToList();
+
+                    if (resultado.Count == 0)
+                    {
+                        respuesta.Codigo = 2;
+                        respuesta.Mensaje = "No se encontraron datos sobre las casas";
+                        return Ok(respuesta);
+                    }
+                    respuesta.Codigo = 1;
+                    respuesta.Mensaje = "Información consultada correctamente";
+
+                    respuesta.Objetos = resultado;
+                    respuesta.ResultadoTransaccion = true;
+                    return Ok(respuesta);
+                }
+            }
+            catch (Exception)
+            {
+                respuesta.Codigo = 3;
+                respuesta.Mensaje = "Se presentó un inconveniente";
+                return Ok(respuesta);
+            }
+        }
+
         [HttpPost]
         [Route("AlquilarCasa")]
         public IActionResult AlquilarCasa(CasasEnt entidad)

@@ -1,7 +1,16 @@
+using CasoEstudio2.Interfaces;
+using CasoEstudio2.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<ICasasModel, CasasModel>();
 
 var app = builder.Build();
 
