@@ -17,8 +17,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\BuscarID.js",
-      "PackagePath": "staticwebassets\\js\\BuscarID.js"
+      "Id": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\mostrarPrecio.js",
+      "PackagePath": "staticwebassets\\js\\mostrarPrecio.js"
+    },
+    {
+      "Id": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\obtenerId.js",
+      "PackagePath": "staticwebassets\\js\\obtenerId.js"
     },
     {
       "Id": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\site.js",

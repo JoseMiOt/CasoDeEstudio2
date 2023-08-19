@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GVVucZQquTMWv+nyoStJaEvEIlLqH81+Me7ODpLiEyI=",
+  "Hash": "9hiQtKpnOkg6mBOaJCzPhcwWpGopg77824q1cKp1sqo=",
   "Source": "CasoEstudio2",
   "BasePath": "_content/CasoEstudio2",
   "Mode": "Default",
@@ -102,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\BuscarID.js",
+      "Identity": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\mostrarPrecio.js",
       "SourceId": "CasoEstudio2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\",
       "BasePath": "_content/CasoEstudio2",
-      "RelativePath": "js/BuscarID.js",
+      "RelativePath": "js/mostrarPrecio.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,7 +116,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\BuscarID.js"
+      "OriginalItemSpec": "wwwroot\\js\\mostrarPrecio.js"
+    },
+    {
+      "Identity": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\obtenerId.js",
+      "SourceId": "CasoEstudio2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\",
+      "BasePath": "_content/CasoEstudio2",
+      "RelativePath": "js/obtenerId.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\obtenerId.js"
     },
     {
       "Identity": "C:\\Users\\josmi\\Documents\\Github\\Proyecto\\CasoDeEstudio2\\CasoEstudio2\\CasoEstudio2\\wwwroot\\js\\site.js",

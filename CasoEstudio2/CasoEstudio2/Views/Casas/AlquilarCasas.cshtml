@@ -17,7 +17,7 @@
             <option value="">Seleccione una casa...</option>
             @foreach (var item in Model.Objetos)
             {
-                <option value="@item.IdCasa">@item.IdCasa - @item.Descripcion</option>
+                <option value="@item.IdCasa" data-precio="@item.Precio">@item.IdCasa - @item.Descripcion</option>
             }
 
         </select>
@@ -37,12 +37,7 @@
     <button type="submit" class="btn btn-outline-success">Alquilar</button>
 }
 
-<script>
-    $(document).ready(function () {
-        $("#IdCasa").change(function () {
-            var selectedId = $(this).val();
 
-            $("#casaIdHidden").val(selectedId);
-        });
-    });
-</script>
+
+<script src="~/js/mostrarprecio.js"></script>
+<script src="~/js/obtenerid.js"></script>
